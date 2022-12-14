@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+
+import {BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from './Pages/Home';
+import Docs from './Pages/Docs';
+import Resources from './Pages/Resources';
+import AboutUs from './Pages/AboutUs';
+import Error from './Pages/Error';
+
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1 className="WebsiteName">My Safe Space</h1>
+        <nav className="MainNav">
+          <Link to="/" className="NavLink">Home</Link>
+          <Link to="/Docs" className="NavLink">Docs</Link>
+          <Link to="/Resources" className="NavLink">Resources</Link>
+          <Link to="/AboutUs" className="NavLink">About Us</Link>
+        </nav>
+        <hr className="Line"/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Docs" element={<Docs />} />
+          <Route path="/Resources" element={<Resources />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </Router>
   );
 }
 
