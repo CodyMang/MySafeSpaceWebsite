@@ -21,7 +21,7 @@ function Home() {
             <br/>
             <hr className="Line"/>
             <div className="Buttons">
-                <Button variant="primary" size="lg" className="p-4">Download</Button>
+                {/* <Button variant="primary" size="lg" className="p-4">Download</Button> */}
                 <a href="https://github.com/PrestonFawcett/MySafeSpace"><Button variant="primary" size="lg" className="p-4">GitHub Repo</Button> </a>
             </div>
             <hr className="Line"/>
