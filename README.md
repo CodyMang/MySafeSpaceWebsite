@@ -11,6 +11,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Requirements
 - [NodeJS](https://nodejs.org/en/)
-- [ReactJS]
-- NPM or yarn
+- [NPM](https://www.npmjs.com/)
+- [ReactJS](https://reactjs.org/)
+
+### Instructions to run
+1. `npm install`
+2. `npm run start` for dev mode
 
